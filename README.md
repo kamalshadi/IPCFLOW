@@ -8,7 +8,7 @@ Segment | Segment length for IPC analysis | 768 |
 Overlap | Overlap between data segments | 0.9 |
 fcut | The largest frequency of interest | 50hz |
 
-> IPC will be calculated with temporal resolution of $$~\Delta t=\frac{(1-overlap)\times segment}{fs}$$ and frequency resolution of $$\Delta f =\frac{fs}{Segment}$$. With the default setting we get $$~\Delta t=15ms$$ and $$~\Delta f=6Hz$$
+> IPC will be calculated with temporal resolution of $~\Delta t=\frac{(1-overlap)\times segment}{fs}$ and frequency resolution of $\Delta f =\frac{fs}{Segment}$. With the default setting we get $~\Delta t=15ms$$ and $~\Delta f=6Hz$
 
 ### Step 2 - setup postprocessing parameters  
 __IPC Flow__ will collapse all the IPC value in the frequency band of interEst into a single time-series. This frequency band can be set in the **step 2** of the GUI. The time-series is further downsampled to the resoltion set by __timebin__ using __median__, __mean__, and __max__. The original time-series without downsampling is a dumped in __.mat__ format with suffix __-timebin__ while the downsampled data is dumped in __csv__ format for easy parsing with __-timebin__ suffix again.
